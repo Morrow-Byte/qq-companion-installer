@@ -1,14 +1,13 @@
 {
   "name": "qq-companion-installer",
-  "version": "1.1.0",
-  "description": "Install the QQ companion skill and start its guided Codex deployment on Windows.",
+  "version": "2.0.0",
+  "description": "Install the QQ companion skill for the current AI to continue deployment on Windows.",
   "type": "module",
   "bin": { "qq-companion-installer": "bin/install.mjs" },
-  "files": ["bin/", "skills/"],
+  "files": ["bin/", "skills/", "AGENTS.md"],
   "engines": { "node": ">=20" },
   "os": ["win32"],
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/zhubenxu03-star/qq-companion-installer.git" },
-  "scripts": { "test": "node --test" },
-  "dependencies": { "@openai/codex": "0.164.0" }
+  "repository": { "type": "git", "url": "https://github.com/Morrow-Byte/qq-companion-installer.git" },
+  "scripts": { "test": "node --test" }
 }

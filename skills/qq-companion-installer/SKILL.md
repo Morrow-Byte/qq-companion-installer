@@ -1,11 +1,18 @@
 ---
 name: qq-companion-installer
-description: 在 Windows 上按用户指定磁盘部署或修复 QQ 聊天机器人，接通 DeepSeek Harness、qq-bridge 与 NapCat/OneBot，配置语音、画图、表情和桌面入口，并可选安装歌声工作台。适用于实际安装、迁移、续装和验收请求。
+description: 在 Windows 上部署、修复或迁移 QQ 聊天机器人，接通 DeepSeek Harness、qq-bridge 和 NapCat/OneBot，配置语音、画图、表情及桌面入口，可选歌声。用户请求安装并使用此 skill 部署机器人时，在当前 AI 会话执行完整流程。
 ---
 
 # QQ 聊天伙伴安装
 
 目标是交付用户能实际私聊使用、能重启恢复的机器人，而非只下载软件或写一份计划。本 skill 是安装工作流与辅助工具，不是预装环境；不包含第三方程序、模型、素材或任何人的账号配置。服务和版本须在目标电脑上验证。
+
+## AI 调用约定
+
+- 由当前 AI 会话执行，使用已有的终端、文件与网络工具；不要求安装或启动另一个 AI。平台没有自动注册此 skill 时，直接读取本文件及配套文件即可执行。缺少本机工具时说明限制，不声称操作已经完成。
+- `SKILL_DIR` 是本 `SKILL.md` 所在目录。所有 `references/`、`assets/`、`scripts/` 路径均相对它解析，不以当前终端工作目录为准。`INSTALL_ROOT` 是用户指定的部署目录；两者不得混用。配套目录要完整获取，不能只下载本文件。
+- 遵循用户本次请求：要求安装并部署时，装好 skill 后继续完成下面的流程；仅要求保存、安装、审阅或修改 skill 时，完成该范围即可，不额外部署机器人。
+- 安装位置优先使用用户指定值；未指定且 D 盘存在时默认 `D:\QQCompanion`。续装读取已有状态，只收集缺少的账号、服务和偏好，不把模板空值填成上一个使用者的信息。
 
 ## 项目与下载地址
 
@@ -30,7 +37,7 @@ description: 在 Windows 上按用户指定磁盘部署或修复 QQ 聊天机器
 
 这些来源包含开源软件及采用独立条款的配套资源。NapCat 当前采用限制性再分发许可证；声库、声码器和 SoundFont 也不继承软件仓库的许可。不要把整张表统一宣称为可任意再分发或商用。
 
-本 skill 发布于 [qq-companion-installer](https://github.com/zhubenxu03-star/qq-companion-installer)。装入后即可根据上述组件来源执行部署。表情、媒体与歌声工具的本地桥接适配仍须按后文实现和测试，不能仅下载仓库就宣布已接通。
+本 skill 发布于 [qq-companion-installer](https://github.com/Morrow-Byte/qq-companion-installer)。装入后即可根据上述组件来源执行部署。表情、媒体与歌声工具的本地桥接适配仍须按后文实现和测试，不能仅下载仓库就宣布已接通。
 
 ## 范围与操作方式
 
@@ -76,7 +83,7 @@ description: 在 Windows 上按用户指定磁盘部署或修复 QQ 聊天机器
 
 ## 再次分享
 
-原始模板不写入部署者信息。对外提供本仓库链接与 README 中的一条安装命令，不分享运行目录。修改 skill 后、提交仓库前运行：
+原始模板不写入部署者信息。对外提供本仓库链接与 README 中给 AI 的一句安装指令，不分享运行目录。修改 skill 后、提交仓库前运行：
 
 ```text
 python scripts/scan-share.py --root <SKILL_DIRECTORY> --deny-file <LOCAL_PRIVATE_DENYLIST>
