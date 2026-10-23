@@ -3,7 +3,7 @@
 在 **Windows PowerShell** 运行：
 
 ```powershell
-npx.cmd --yes --cache D:\QQCompanion\.npm-cache github:zhubenxu03-star/qq-companion-installer
+npx.cmd --yes --cache D:\QQCompanion\.npm-cache git+https://github.com/zhubenxu03-star/qq-companion-installer.git
 ```
 
 需要先装好 [Node.js 20+](https://nodejs.org/) 和 [Git for Windows](https://gitforwindows.org/)，并能访问 GitHub 与 npm。无需手动下载 ZIP、复制长提示词或预装 Codex CLI。
@@ -26,7 +26,7 @@ npx.cmd --yes --cache D:\QQCompanion\.npm-cache github:zhubenxu03-star/qq-compan
 更换安装位置时，同时更换 npm 缓存路径和 `--root`：
 
 ```powershell
-npx.cmd --yes --cache E:\QQCompanion\.npm-cache github:zhubenxu03-star/qq-companion-installer --root E:\QQCompanion
+npx.cmd --yes --cache E:\QQCompanion\.npm-cache git+https://github.com/zhubenxu03-star/qq-companion-installer.git --root E:\QQCompanion
 ```
 
 加上 `--install-only` 可以只安装 skill；不启动 AI，也不安装机器人组件。`--help` 查看参数。
