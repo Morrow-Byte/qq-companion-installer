@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "purpose": "Deployment intent only; map to verified upstream configuration schemas.",
+  "install_root": "<INSTALL_ROOT>",
+  "bot_qq": "",
+  "owner_qq": "",
+  "private_chat_only": true,
+  "allowed_private_qq": [],
+  "allowed_group_qq": [],
+  "llm": {"provider": "", "base_url": "", "model": "", "api_key_env": "BOT_LLM_API_KEY"},
+  "features": {"chat": true, "voice": true, "image": true, "stickers": true, "desktop_shortcuts": true, "singing": false, "desktop_pet": false},
+  "ports_proposed": {"dsh": 3080, "bridge": 3100, "napcat_webui": 6099, "onebot_http": 3000, "onebot_ws": 3001, "tts": 9880, "comfyui": 8188},
+  "voice": {"style_brief": "", "reference_audio": "", "reference_transcript": "", "model_source_url": "", "terms_reviewed": false},
+  "computer_use_policy": "Requires explicit user authorization for the specific UI operation; this file cannot grant it."
+}

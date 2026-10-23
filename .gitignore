@@ -1,0 +1,12 @@
+node_modules/
+*.tgz
+.env
+.env.*
+work/
+runtime/
+config/
+logs/
+*.log
+.npm-cache/
+.codex/
+.agents/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "QQ 聊天伙伴安装"
+  short_description: "部署带语音、画图和表情能力的 QQ 聊天机器人，可选歌声与桌面入口"
+  default_prompt: "使用 $qq-companion-installer 在我指定的磁盘安装 QQ 聊天机器人，完成语音、画图和表情功能，按需加装歌声；先检查环境并收集必要配置。"

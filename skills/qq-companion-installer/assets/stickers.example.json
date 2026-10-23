@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "purpose": "Neutral catalog template; adapt to the installed sticker adapter schema.",
+  "root": "<INSTALL_ROOT>/media/stickers",
+  "max_per_reply": 1,
+  "items": [],
+  "required_item_fields": ["id", "relative_path", "tags", "description", "source_url", "license_or_permission"],
+  "optional_tags": ["greeting", "happy", "thanks", "comfort", "confused", "goodnight"]
+}
